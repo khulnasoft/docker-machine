@@ -1,0 +1,15 @@
+stages:
+- prepare
+- validate
+- build
+- release
+- postrelease
+
+include:
+- local: .gitlab/ci/yaml/_common.gitlab-ci.yml
+- local: .gitlab/ci/yaml/_rules.gitlab-ci.yml
+- local: .gitlab/ci/yaml/prepare.gitlab-ci.yml
+- local: .gitlab/ci/yaml/validate.gitlab-ci.yml
+- local: .gitlab/ci/yaml/build.gitlab-ci.yml
+- local: .gitlab/ci/yaml/release.gitlab-ci.yml
+- local: .gitlab/ci/yaml/postrelease.gitlab-ci.yml
